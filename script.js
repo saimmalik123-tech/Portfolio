@@ -50,7 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const modeSelector = document.getElementById('modes');
 
-// Load saved mode from localStorage (optional but useful)
 const savedMode = localStorage.getItem('mode');
 if (savedMode === 'light') {
     document.body.classList.add('light-mode');
