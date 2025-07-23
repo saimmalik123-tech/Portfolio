@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const hamburger = document.getElementById("hamburger");
     const navLinks = document.getElementById("nav-links");
     const icon = hamburger.querySelector("i");
+    const skillCards = document.querySelectorAll('.skill');
 
     hamburger.addEventListener("click", () => {
         navLinks.classList.toggle("active");
@@ -54,6 +55,7 @@ const savedMode = localStorage.getItem('mode');
 if (savedMode === 'light') {
     document.body.classList.add('light-mode');
     modeSelector.value = 'light';
+    
 }
 
 modeSelector.addEventListener('change', function () {
