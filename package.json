@@ -1,5 +1,6 @@
 {
   "name": "portfolio",
+  "homepage": "https://github.com/saimmalik123-tech/Portfolio.git",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -19,6 +20,7 @@
     "lucide-react": "^0.553.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-router-dom": "^7.9.6",
     "tailwindcss": "^4.1.17",
     "three": "^0.181.1"
   },
