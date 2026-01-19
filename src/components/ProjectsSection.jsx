@@ -27,7 +27,7 @@ const ProjectsSection = () => {
         "A Frontend e-commerce solution with React, Free API, and LocalStorage.",
       longDescription:
         "A comprehensive e-commerce platform built with modern technologies. Includes product management, shopping cart.",
-      image: "./public/e-commerce.png",
+      image: "/e-commerce.png",
       liveUrl: "https://e-commerce-by-react.netlify.app/",
       githubUrl: "https://github.com/username/ecommerce",
       technologies: ["React", "Free API", "LocalStorage"],
@@ -42,7 +42,7 @@ const ProjectsSection = () => {
         "A modern, responsive SaaS AI Project website with smooth animations and dark theme.",
       longDescription:
         "A cutting-edge SaaS AI website featuring smooth animations, responsive design, and optimized performance. Includes interactive elements and SEO optimization.",
-      image: "./public/SaaS project.png",
+      image: "/SaaS project.png",
       liveUrl: "https://free-aitoolshub.vercel.app/",
       githubUrl: "https://github.com/username/portfolio",
       technologies: ["React", "APIs", "Tailwind CSS", "Supabase"],
@@ -57,7 +57,7 @@ const ProjectsSection = () => {
         "A disposable email generator with real-time inbox fetching.",
       longDescription:
         "A fully functional temporary email application using Temp Mail API. Users can generate disposable emails, view incoming messages in real time, and copy or refresh their inbox. Built with secure API handling and optimized UI for fast responses.",
-      image: "./public/temp-mail.png",
+      image: "/temp-mail.png",
       liveUrl: "https://temp-e-mail.netlify.app/",
       githubUrl: "https://github.com/username/tempmail-api",
       technologies: [
@@ -77,7 +77,7 @@ const ProjectsSection = () => {
         "A simple weather application showing current weather by city.",
       longDescription:
         "A straightforward weather web app built using OpenWeather API. Users can search for any city to see real-time temperature, humidity, and weather conditions. Clean UI with responsive design for mobile and desktop.",
-      image: "./public/weather.png",
+      image: "/weather.png",
       liveUrl: "https://weather-web-app-by-react.netlify.app/",
       githubUrl: "https://github.com/username/simple-weather-app",
       technologies: ["React", "CSS", "API", "Axios"],
@@ -92,7 +92,7 @@ const ProjectsSection = () => {
         "A real-time chat application with instant messaging and user presence.",
       longDescription:
         "A web-based chat application built using React, HTML, CSS, and JavaScript, with Supabase providing real-time database and authentication. Users can send and receive messages instantly, create chat rooms, and see online users in real-time.",
-      image: "./public/chatApp.png",
+      image: "/chatApp.png",
       liveUrl: "https://active-chat.netlify.app/",
       githubUrl: "https://github.com/username/react-chat-app",
       technologies: ["HTML", "CSS", "JavaScript", "Supabase"],
@@ -107,7 +107,7 @@ const ProjectsSection = () => {
         "An interactive quiz application fetching questions from an API.",
       longDescription:
         "A responsive web-based quiz application built with HTML, CSS, and JavaScript. It fetches questions dynamically from an API, allows multiple-choice answers, keeps track of scores, and provides instant feedback to users.",
-      image: "./public/quiz.png",
+      image: "/quiz.png",
       liveUrl: "https://quizwhizapp.netlify.app/",
       githubUrl: "https://github.com/username/quiz-web-app",
       technologies: ["HTML", "CSS", "JavaScript", "REST API"],
@@ -122,7 +122,7 @@ const ProjectsSection = () => {
         "A clone of SMIT Harbour showcasing a responsive landing page and UI.",
       longDescription:
         "A Hackathon project replicating the SMIT Harbour website using only HTML and CSS. The project focuses on responsive layouts, modern UI elements, and pixel-perfect design based on the original platform.",
-      image: "./public/hackathon.png",
+      image: "/hackathon.png",
       liveUrl: "https://roaring-squirrel-97db8e.netlify.app/",
       githubUrl: "https://github.com/username/smit-harbour-clone",
       technologies: ["HTML", "CSS", "Responsive Design"],
