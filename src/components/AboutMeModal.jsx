@@ -91,7 +91,7 @@ const AboutMeModal = ({ isOpen, onClose }) => {
 
                       <div className="relative bg-gray-900 rounded-full p-1">
                         <img
-                          src="./public/profile.png"
+                          src="/profile.png"
                           alt="Muhammad Saim"
                           className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full object-cover border-4 border-gray-800 shadow-lg"
                         />
