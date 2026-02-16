@@ -130,6 +130,48 @@ const ProjectsSection = () => {
       featured: false,
       status: "completed",
     },
+    {
+      id: 8,
+      title: "URL Shortener",
+      description:
+        "A full-stack URL shortening web app that converts long URLs into short, shareable links with fast redirection.",
+      longDescription:
+        "A full-stack URL Shortener application built using ReactJS, TailwindCSS, NodeJS, ExpressJS, and MongoDB. The app allows users to generate short URLs from long links, stores them securely in the database, and handles instant redirection. It features a clean, responsive UI, RESTful APIs, and efficient backend logic for URL mapping and analytics-ready structure.",
+      image: "/URL.png",
+      liveUrl: "https://url-shortener-397cc.web.app",
+      githubUrl: "https://github.com/saimmalik123-tech/URL-Shortener",
+      technologies: [
+        "ReactJS",
+        "TailwindCSS",
+        "NodeJS",
+        "ExpressJS",
+        "MongoDB",
+      ],
+      category: "fullstack",
+      featured: false,
+      status: "completed",
+    },
+    {
+      id: 9,
+      title: "A Song Website",  
+      description:
+        "A full-stack music web application that allows users to browse, play, and manage songs through a modern interface.",
+      longDescription:
+        "A full-stack Song Website built using ReactJS, TailwindCSS, NodeJS, ExpressJS, and MongoDB. The platform enables users to explore a collection of songs, view song details, and stream audio with a smooth user experience. It features a responsive UI, RESTful APIs for song management, and a scalable backend structure for handling music data efficiently.",
+      image: "/song.png",
+      liveUrl: "https://tune-breeze.web.app/",
+      githubUrl: "https://github.com/saimmalik123-tech/Song-website",
+      technologies: [
+        "ReactJS",
+        "TailwindCSS",
+        "NodeJS",
+        "ExpressJS",
+        "MongoDB",
+      ],
+      category: "fullstack",
+      featured: true,
+      status: "completed",
+    },
   ];
 
   const categories = [
@@ -160,14 +202,14 @@ const ProjectsSection = () => {
     activeCategory === "all"
       ? projects
       : activeCategory === "featured"
-      ? projects.filter((project) => project.featured)
-      : projects.filter((project) => project.category === activeCategory);
+        ? projects.filter((project) => project.featured)
+        : projects.filter((project) => project.category === activeCategory);
 
   const indexOfLastProject = currentPage * projectsPerPage;
   const indexOfFirstProject = indexOfLastProject - projectsPerPage;
   const currentProjects = filteredProjects.slice(
     indexOfFirstProject,
-    indexOfLastProject
+    indexOfLastProject,
   );
   const totalPages = Math.ceil(filteredProjects.length / projectsPerPage);
 
@@ -178,7 +220,7 @@ const ProjectsSection = () => {
 
     const interval = setInterval(() => {
       setCurrentProject((prev) =>
-        prev === featuredProjects.length - 1 ? 0 : prev + 1
+        prev === featuredProjects.length - 1 ? 0 : prev + 1,
       );
     }, 5000);
 
@@ -187,13 +229,13 @@ const ProjectsSection = () => {
 
   const nextProject = () => {
     setCurrentProject((prev) =>
-      prev === featuredProjects.length - 1 ? 0 : prev + 1
+      prev === featuredProjects.length - 1 ? 0 : prev + 1,
     );
   };
 
   const prevProject = () => {
     setCurrentProject((prev) =>
-      prev === 0 ? featuredProjects.length - 1 : prev - 1
+      prev === 0 ? featuredProjects.length - 1 : prev - 1,
     );
   };
 
@@ -338,7 +380,7 @@ const ProjectsSection = () => {
                                 >
                                   {tech}
                                 </Motion.span>
-                              )
+                              ),
                             )}
                           </div>
                         </div>
@@ -612,7 +654,7 @@ const ProjectsSection = () => {
                   >
                     {page}
                   </Motion.button>
-                )
+                ),
               )}
             </div>
 
