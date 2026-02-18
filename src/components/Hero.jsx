@@ -28,7 +28,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="flex flex-col-reverse md:flex-row items-center justify-between px-10 md:px-16 lg:px-24 py-20 md:py-32 bg-black text-white"
+      className="flex flex-col-reverse md:flex-row items-center justify-between px-10 md:px-16 lg:px-20 py-20 md:py-32 bg-black text-white"
     >
       <Motion.div
         initial={{ opacity: 0, x: -50 }}

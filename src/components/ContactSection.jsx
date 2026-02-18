@@ -92,19 +92,32 @@ const ContactSection = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    const form = e.target;
+    const iframe = document.createElement("iframe");
+    iframe.name = "hiddenIframe";
+    iframe.style.display = "none";
+    document.body.appendChild(iframe);
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    iframe.onload = () => {
+      setIsSubmitting(false);
+      setIsSubmitted(true);
 
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({ name: "", email: "", subject: "", message: "" });
-    }, 4000);
+      setTimeout(() => {
+        setIsSubmitted(false);
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      }, 4000);
+
+      setTimeout(() => {
+        document.body.removeChild(iframe);
+      }, 1000);
+    };
+
+    form.target = iframe.name;
+    form.submit();
   };
 
   const copyToClipboard = async (text, field) => {
@@ -191,7 +204,6 @@ const ContactSection = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            {/* Contact Form */}
             <motion.div
               variants={formVariants}
               initial="hidden"
@@ -241,12 +253,27 @@ const ContactSection = () => {
                     </motion.div>
                   ) : (
                     <motion.form
+                      action="https://formsubmit.com/saim9j8@gmail.com"
+                      method="POST"
                       variants={containerVariants}
                       initial="hidden"
                       animate="visible"
                       onSubmit={handleSubmit}
                       className="space-y-6 relative z-10"
                     >
+                      <input type="hidden" name="_captcha" value="false" />
+                      <input
+                        type="hidden"
+                        name="_subject"
+                        value="New Contact Form Message"
+                      />
+                      <input type="hidden" name="_template" value="table" />
+                      <input
+                        type="hidden"
+                        name="_next"
+                        value="https://your-site.com/thank-you"
+                      />
+
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <motion.div variants={itemVariants}>
                           <label className="block text-gray-300 text-sm font-medium mb-2">
@@ -403,7 +430,6 @@ const ContactSection = () => {
                 })}
               </div>
 
-              {/* Email Modal Trigger */}
               <motion.button
                 variants={itemVariants}
                 whileHover={{ scale: 1.02 }}
@@ -416,7 +442,6 @@ const ContactSection = () => {
                 <ExternalLink className="w-4 h-4 text-gray-400" />
               </motion.button>
 
-              {/* Social Links */}
               <motion.div
                 variants={itemVariants}
                 className="bg-gray-900 border border-gray-800 rounded-2xl p-6"
@@ -444,7 +469,6 @@ const ContactSection = () => {
                 </div>
               </motion.div>
 
-              {/* Availability Status */}
               <motion.div
                 variants={itemVariants}
                 className="bg-gray-900 border border-green-500/20 rounded-2xl p-6"
@@ -466,7 +490,6 @@ const ContactSection = () => {
         </div>
       </section>
 
-      {/* Email Modal */}
       <AnimatePresence>
         {showEmailModal && (
           <motion.div

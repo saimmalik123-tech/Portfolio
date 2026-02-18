@@ -28,7 +28,7 @@ function RobotModel() {
 export default function RobotViewer() {
   return (
     <Motion.div
-      className="w-full sm:w-3/4 md:w-1/2 lg:w-1/3 h-80 sm:h-96 md:h-[70vh] lg:h-[80vh]"
+      className="w-full sm:w-3/4 md:w-1/2 lg:w-[45vw] h-80 sm:h-96 md:h-[70vh] lg:h-[80vh]"
       initial={{ x: 200, opacity: 0 }}
       animate={{
         x: 0,

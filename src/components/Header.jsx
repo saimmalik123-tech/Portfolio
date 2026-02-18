@@ -89,7 +89,7 @@ const Header = () => {
                   <motion.button
                     key={item.name}
                     onClick={item.onClick}
-                    className="text-gray-300 hover:text-white font-medium transition-all duration-300 flex items-center gap-2 group"
+                    className="text-gray-300 hover:text-white cursor-pointer font-medium transition-all duration-300 flex items-center gap-2 group"
                     whileHover={{ scale: 1.05, y: -1 }}
                     whileTap={{ scale: 0.95 }}
                   >

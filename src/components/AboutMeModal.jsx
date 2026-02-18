@@ -218,21 +218,25 @@ const AboutMeModal = ({ isOpen, onClose }) => {
                   className="mt-6 pt-4 border-t border-gray-700"
                 >
                   <div className="flex flex-col sm:flex-row gap-2 justify-center md:justify-start">
-                    <Motion.button
+                    <Motion.a
+                      onClick={onClose}
+                      href="#projects"
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                       className="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg font-semibold text-sm transition-all duration-200 flex items-center justify-center gap-2 order-2 sm:order-1"
                     >
                       Explore My Work
-                    </Motion.button>
+                    </Motion.a>
 
-                    <Motion.button
+                    <Motion.a
+                      download
+                      href="/resume.pdf"
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                       className="px-4 py-2 bg-gray-800 hover:bg-gray-700 border border-gray-600 text-gray-200 rounded-lg font-semibold text-sm transition-all duration-200 order-1 sm:order-2"
                     >
                       Get My CV
-                    </Motion.button>
+                    </Motion.a>
                   </div>
                 </Motion.div>
               </div>
